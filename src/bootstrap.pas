@@ -34,18 +34,28 @@ type
 implementation
 
 uses
-    sysutils
+    sysutils,
 
-    (*! -------------------------------
-     *   controllers factory
-     *----------------------------------- *)
-    {---- put your controller factory here ---};
-
-
+    HeaderViewFactory,
+    FooterViewFactory,
+    ArticleControllerFactory,
+    SearchFormViewFactory,
+    ArticleViewFactory,
+    ArticleModelFactory,
+    ArticleParamsFactory,
+    ArticleCreateControllerFactory,
+    ArticleCreateViewFactory,
+    ArticleCreateModelFactory;
 
     function TAppServiceProvider.buildAppConfig(const container : IDependencyContainer) : IAppConfiguration;
     begin
-        result := inherited buildAppConfig(container);
+        container.add(
+            'config',
+            TJsonFileConfigFactory.create(
+                getCurrentDir() + '/config/config.json'
+            )
+        );
+        result := container['config'] as IAppConfiguration;
 
     end;
 

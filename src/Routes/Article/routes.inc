@@ -6,9 +6,4 @@
  * @license   https://github.com/fanoframework/fano-elasticsearch/blob/master/LICENSE (GPL-3.0)
  *------------------------------------------------------------- *)
 
-{%dependencies.inc}
-
-{---put your dependencies registration here---}
-
-container.add('articleController', TArticleControllerFactory.create());
-container.add('articlecreateController', TArticleCreateControllerFactory.create());
+//router.get('/article', container.get('articleController') as IRequestHandler);

@@ -6,6 +6,4 @@
  * @license   [[LICENSE_URL]] ([[LICENSE]])
  *------------------------------------------------------------- *)
 
-{%dependencies.inc}
-
-{---put your dependencies registration here---}
+//router.get('/article/create', container.get('articlecreateController') as IRequestHandler);

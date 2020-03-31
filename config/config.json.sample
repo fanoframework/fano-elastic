@@ -1,0 +1,8 @@
+{
+    "appName" : "Fano Elasticsearch Example Application",
+    "baseUrl" : "http://replace.with.your.own.domain",
+    "elasticsearch" : {
+        "url" : "http://localhost:9200",
+        "index" : "/fano-articles"
+    }
+}

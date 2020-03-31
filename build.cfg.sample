@@ -36,11 +36,30 @@
 #-Px86_64
 
 #----------------------------------------------
+# add {$DEFINE LIBCURL}
+# so application can be linked to libcurl library
+#----------------------------------------------
+-dLIBCURL
+
+#----------------------------------------------
 # Application Unit search path
 # USER_APP_DIR is contains user application base directory
 #----------------------------------------------
 -Fu$USER_APP_DIR$/Dependencies
 -Fu$USER_APP_DIR$/Routes
+-Fu$USER_APP_DIR$/App/Common/Views/*
+-Fu$USER_APP_DIR$/App/Article/Controllers
+-Fu$USER_APP_DIR$/App/Article/Controllers/Factories
+-Fu$USER_APP_DIR$/App/Article/Views
+-Fu$USER_APP_DIR$/App/Article/Views/Factories
+-Fu$USER_APP_DIR$/App/Article/Models
+-Fu$USER_APP_DIR$/App/Article/Models/Factories
+-Fu$USER_APP_DIR$/App/ArticleCreate/Controllers
+-Fu$USER_APP_DIR$/App/ArticleCreate/Controllers/Factories
+-Fu$USER_APP_DIR$/App/ArticleCreate/Views
+-Fu$USER_APP_DIR$/App/ArticleCreate/Views/Factories
+-Fu$USER_APP_DIR$/App/ArticleCreate/Models
+-Fu$USER_APP_DIR$/App/ArticleCreate/Models/Factories
 #-Fu$USER_APP_DIR$/path/to/other/units
 #-Fu$USER_APP_DIR$/path/to/other/units
 
