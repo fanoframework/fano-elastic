@@ -38,7 +38,7 @@ uses
         contentView := TView.create(
             container.get('templateParser') as ITemplateParser,
             fileReader.readFile(
-                extractFileDir(getCurrentDir()) + '/resources/Templates/create-article.html'
+                getCurrentDir() + '/resources/Templates/create-article.html'
             )
         );
         //TCompositeView can only compose from two views

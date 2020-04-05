@@ -45,7 +45,10 @@ uses
     ArticleParamsFactory,
     ArticleCreateControllerFactory,
     ArticleCreateViewFactory,
-    ArticleCreateModelFactory;
+    ArticleCreateModelFactory,
+    ArticleCreateParamsFactory,
+    ArticleCreateSubmitControllerFactory;
+
 
     function TAppServiceProvider.buildAppConfig(const container : IDependencyContainer) : IAppConfiguration;
     begin
