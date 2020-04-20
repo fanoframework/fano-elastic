@@ -17,3 +17,4 @@ container.add('articleParams', TArticleParamsFactory.create());
 
 container.add('articleCreateModel', TArticleCreateModelFactory.create());
 container.factory('articleCreateParams', TArticleCreateParamsFactory.create(TModelParamsFactory.create()));
+container.add('article.model.detail', TArticleDetailModelFactory.create());

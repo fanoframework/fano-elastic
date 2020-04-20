@@ -76,7 +76,6 @@ implementation
                 '<table class="table is-fullwidth is-hoverable">' +
                 '<thead>' +
                   '<tr>' +
-                  '  <th>No</th>' +
                   '  <th>Title</th>' +
                   '  <th>Author</th>' +
                   '</tr>' +
@@ -86,8 +85,7 @@ implementation
             begin
                 respBody.write(
                     '<tr>' +
-                    '<td>' + articleData.readString('_id') + '</td>' +
-                    '<td>' + articleData.readString('_source.name') + '</td>' +
+                    '<td><a href="/article/update/'+ articleData.readString('_id') +'">' + articleData.readString('_source.name') + '</a></td>' +
                     '<td>' + articleData.readString('_source.author') + '</td>' +
                     '</tr>'
                 );

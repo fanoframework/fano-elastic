@@ -13,3 +13,4 @@
 container.add('articleController', TArticleControllerFactory.create());
 container.add('articlecreateController', TArticleCreateControllerFactory.create());
 container.add('articlecreateSubmitController', TArticleCreateSubmitControllerFactory.create());
+container.add('article.update.controller', TArticleUpdateControllerFactory.create());
