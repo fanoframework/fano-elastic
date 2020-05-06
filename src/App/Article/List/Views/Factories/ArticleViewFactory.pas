@@ -36,22 +36,12 @@ uses
     ArticleView;
 
     function TArticleViewFactory.build(const container : IDependencyContainer) : IDependency;
-    var headerAndContentView, contentView : IView;
     begin
-        contentView := TCompositeView.create(
-            container.get('searchForm') as IView,
-            TArticleView.create(container.get('articleModel') as IModelReader)
-        );
-        //TCompositeView can only compose from two views
-        //We need to display three views: header part, main content, and footer
-        //so we need to daisy-chained two composite view
-        headerAndContentView := TCompositeView.create(
-            container.get('headerView') as IView,
-            contentView
-        );
-        result := TCompositeView.create(
-            headerAndContentView,
-            container.get('footerView') as IView
-        );
+        result := TGroupView.create([
+            container['headerView'] as IView,
+            container['searchForm'] as IView,
+            TArticleView.create(container['articleModel'] as IModelReader),
+            container['footerView'] as IView
+        ]);
     end;
 end.
