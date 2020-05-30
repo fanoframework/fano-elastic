@@ -93,10 +93,10 @@ implementation
         res := fDetailModel.read(fParams);
         if res.count() > 0 then
         begin
-            viewParams['title'] := res.readString('name');
-            viewParams['author'] := res.readString('author');
-            viewParams['tags'] := res.readString('tags');
-            viewParams['content'] := res.readString('content');
+            fViewParams['title'] := res.readString('name');
+            fViewParams['author'] := res.readString('author');
+            fViewParams['tags'] := res.readString('tags');
+            fViewParams['content'] := res.readString('content');
             result := inherited handleRequest(request, response, args);
         end else
         begin
